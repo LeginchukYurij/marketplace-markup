@@ -1,0 +1,17 @@
+.read-more {
+  color: var(--accent);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  padding: 0;
+  border: none;
+
+  &.active svg {
+    transform: rotate(180deg);
+  }
+}

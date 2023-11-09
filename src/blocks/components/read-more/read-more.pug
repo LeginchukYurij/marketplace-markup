@@ -1,0 +1,29 @@
+mixin read-more-link(cls="", href="#")
+  a(href=href class=cls + " read-more")
+    if block
+      block 
+    else 
+      span Читать больше
+      <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
+        <path d="M1.41016 1.98535L4.48805 5.06324L7.56594 1.98535" stroke="#007879" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>   
+
+mixin read-more-btn(cls="", tp="button")
+  button(type=tp class=cls + " read-more")
+    if block
+      block 
+    else 
+      span Читать больше
+      <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
+        <path d="M1.41016 1.98535L4.48805 5.06324L7.56594 1.98535" stroke="#007879" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>   
+
+mixin read-more-btn-collapse(cls="", tp="button")
+  button(type=tp class=cls + " read-more" data-show-text="Читать больше" data-hide-text="Скрыть")
+    if block
+      block 
+    else 
+      span Читать больше
+      <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
+        <path d="M1.41016 1.98535L4.48805 5.06324L7.56594 1.98535" stroke="#007879" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
