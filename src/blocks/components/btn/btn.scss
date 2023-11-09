@@ -1,0 +1,28 @@
+.primery-btn {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #fff;
+  background-color: var(--accent);
+  box-shadow: 0px 20px 30px -20px var(--accent);
+  border-radius: 10px;
+  padding: 14px 28px 18px;
+  border: none;
+
+  &.dark {
+    background: #4D4D61;
+    box-shadow: 0px 20px 30px -20px rgba(0, 0, 0, 0.68);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  &.drop.active svg {
+    transform: rotate(180deg);
+  }
+}

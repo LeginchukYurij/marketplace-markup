@@ -1,0 +1,11 @@
+mixin btn-link(cls="", href="#")
+  a(href=href class=cls + ' primery-btn')
+    block 
+
+mixin btn-button(cls="", type="button")
+  button(type=type class=cls + ' primery-btn')
+    block     
+
+mixin btn-button-collapse(cls="", type="button")
+  button(type=type class=cls + ' primery-btn' data-show-text="Показать больше" data-hide-text="Скрыть")
+    block        

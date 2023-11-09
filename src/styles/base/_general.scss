@@ -415,9 +415,14 @@ h2, .h2 {
     min-height: calc(100vh - var(--pageYpd) * 2);
     display: grid;
     grid-template-rows: auto 1fr auto;
+    overflow: hidden;
 }
 
 .container  {
     padding-left: 50px;
     padding-right: 50px;
+}
+
+a:hover, button:hover {
+    opacity: 0.8;
 }

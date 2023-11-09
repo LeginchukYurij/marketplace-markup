@@ -1,0 +1,7 @@
+mixin txt-link(cls="", href="#")
+  a(href=href class=cls + " txt-btn")
+    block
+
+mixin txt-btn(cls="", type="button")
+  button(type=type class=cls + " txt-btn")
+    block    
