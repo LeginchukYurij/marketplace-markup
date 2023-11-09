@@ -12,6 +12,10 @@
   border-radius: 10px;
   padding: 14px 28px 18px;
   border: none;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  min-height: 50px;
 
   &.dark {
     background: #4D4D61;
@@ -24,5 +28,9 @@
 
   &.drop.active svg {
     transform: rotate(180deg);
+  }
+
+  &:hover {
+    color: #fff;
   }
 }

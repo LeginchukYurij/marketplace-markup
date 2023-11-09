@@ -1,0 +1,112 @@
+.cabinet-widget  {
+  display: flex;
+  align-items: center;
+  gap: 15.51px;
+ 
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  height: 50px;
+  padding: 6.29px 48px 6.29px 13px;
+  border-radius: 10px;
+  background: #FFF;
+  position: relative;
+  z-index: 2;
+
+  &:after {
+    border-bottom: 2px solid #4D4D61;
+    border-right: 2px solid #4D4D61;
+    content: "";
+    display: block;
+    height: 6px;
+    margin-top: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 48%;
+    transform-origin: 66% 66%;
+    transform: translateY(-50%) rotate(45deg);
+    transition: all 0.15s ease-in-out;
+    width: 6px;
+  }
+
+  & > a {
+    text-decoration: none;
+    color: #4D4D61;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  .count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #F25767;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    filter: drop-shadow(0px 4px 8px rgba(44, 53, 71, 0.09));
+    color: #FFF;
+    font-size: 10px;
+    line-height: 10px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34.603px;
+    min-width: 34.603px;
+    height: 34.603px;
+    background: #E1E8F8;
+    border-radius: 50%;
+  }
+
+
+  ul {
+    width: max-content;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    padding: 15.51px 25px 20px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 20px 40px 0px rgba(30, 56, 105, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    visibility: hidden;
+
+    li a {
+      color: #4D4D61;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 30px;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  &:hover ul {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+ 
+}

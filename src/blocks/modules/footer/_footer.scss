@@ -92,6 +92,12 @@
       margin-left: auto;
     }
   }
+
+  &__bottom-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .footer-list  {

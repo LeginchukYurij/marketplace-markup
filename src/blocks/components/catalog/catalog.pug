@@ -1,0 +1,59 @@
+.catalog-full
+  button(type="button" aria-label="Закрыть каталог").close-catalog
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+      <path d="M13 1.47656L1 13.4766M1 1.47656L13 13.4766" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  
+  .catalog-full__inner 
+    .level.level1
+      strong.level__title Услуги
+
+      ul
+        li.has-child
+          .level-item
+            a(href="#") Языки программирования
+
+          include ./level2
+
+          
+        li.has-child
+          .level-item
+            a(href="#") Разработка игр
+
+          include ./level2
+
+        li.has-child
+          .level-item
+            a(href="#") Интернет-маркетинг
+
+          include ./level2
+
+        li.has-child
+          .level-item
+            a(href="#") Веб-разработка
+
+          include ./level2
+
+        li.has-child
+          .level-item
+            a(href="#") Разработка мобильных приложений
+
+          include ./level2
+
+        li.has-child
+          .level-item
+            a(href="#") Бизнес-анализ и работа с данными
+
+          include ./level2
+
+        li.has-child
+          .level-item
+            a(href="#") Сеть и безопасность
+
+          include ./level2
+
+        li.has-child
+          .level-item
+            a(href="#") Моделирование данных
+
+          include ./level2

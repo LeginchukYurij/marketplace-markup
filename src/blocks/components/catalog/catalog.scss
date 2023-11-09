@@ -1,0 +1,202 @@
+.catalog-full {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  // background: #111317;
+  width: 100%;
+  background-color: #fff;
+ 
+  // height: calc(100 * var(--vh, 1vh) - var(--headerH));
+  // overflow-y: auto;
+  z-index: 1;
+  --level1: calc(var(--contentW) * 38.23 / 100);
+  --level2: calc(var(--contentW) * 26.54 / 100);
+  --level3: calc(var(--contentW) * 35.23 / 100);
+
+  // &::-webkit-scrollbar {
+  //   width: 2px;
+  //   // transform: translateX(-10px);
+  //   background-color: #D7D8D9;
+  // }
+
+  // &::-webkit-scrollbar-track {
+  //   background-color: none;
+  // }
+
+  // &::-webkit-scrollbar-thumb {
+  //   box-shadow: none;
+  //   background-color: var(--accent);
+  // }
+
+  transform: translateY(-20px);
+  transition: all .3s ease;
+  visibility: hidden;
+  opacity: 0;
+
+  &.active {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__inner  {
+
+  }
+
+  .close-catalog {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 2;
+    mix-blend-mode: exclusion;
+  }
+}
+
+.level {
+  padding: 45px 0 39px 45px;
+  position: relative;
+  // transition-delay: 0ms, 0ms;
+  // transition-duration: 0ms, 0ms;
+  // transition-property: transform, z-index;
+  // transition-timing-function: ease-in;
+  min-height: 456px;
+
+  &.level1 {
+    width: var(--level1);
+    padding-left: 50px;
+    background: linear-gradient(10deg, #4D4D61 62.35%, #FFC12F 151.98%);
+
+    .level ul li a {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
+
+  &.level2 {
+    // z-index: -1;
+    width: var(--level2);
+    background: #23262F;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(0);
+  }
+
+  &.level3 {
+    // z-index: -1;
+    width: var(--level3);
+    background: #111317;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(0);
+  }
+
+  &__title {
+    color:  #FFF;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  ul  {
+    li  {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      
+
+      &.active {
+        & > a {
+          color: var(--accentY);
+        }
+      }
+      
+      a {
+        color: #FFF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px; 
+        text-decoration: none;
+        padding-right: 34px;
+  
+        &:hover {
+          color: var(--accentY);
+        }
+      }
+
+      .more-ic  {
+        width: 28.99px;
+        min-width: 28.99px;
+        height: 28.99px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &.has-child {
+        cursor: pointer;
+        
+
+        & > .level-item {
+          position: relative;
+          width: 100%;
+
+          &:after {
+            content: "";
+            position: absolute;
+            right: 34px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28.99px;
+            height: 28.99px;
+            background-image: url(../img/svg/catalog-ar.svg);
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+
+        &:hover {
+          & > .level-item  a {
+            color: var(--accentY);
+          }
+
+          & > .level-item:after {
+            background-image: url(../img/svg/catalog-ar-h.svg);
+          }
+
+          & > .level {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            z-index: 1;
+
+            transition-delay: 0ms, 600ms;
+            transition-duration: 500ms, 0ms;
+            transition-property: transform, z-index;
+            transition-timing-function: ease-in;
+          }
+        }
+      }
+    }
+  }
+}
