@@ -1,4 +1,28 @@
+include ../../components/breadcrumbs/breadcrumbs
+include ../../components/btn/btn
+
 .catalog-grid 
-  aside.catalog-sidebar 
+  aside.catalog-sidebar
+    form(action="#" name="catalog-filter").catalog-filter-form
+
 
   .catalog-content
+    .catalog-content__head
+      +breadcrumbs
+        li 
+          a(href="/") Главная
+        li 
+          span  СТО
+
+      
+      button.show-on-map 
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+          <path d="M5.96255 12.6643L1 15.5V4.15703L5.96255 1.32129M5.96255 12.6643L11.634 15.5M5.96255 12.6643V1.32129M11.634 15.5L16.5966 12.6643V1.32129L11.634 4.15703M11.634 15.5V4.15703M11.634 4.15703L5.96255 1.32129" stroke="#007879" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        span <b>Показать</b> на карте
+
+    h1.h1.catalog-content__title СТО Toyota Camry в Алматы
+      .count 14566
+
+    +btn-button('show-more')
+      | Показать еще

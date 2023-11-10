@@ -1,6 +1,7 @@
 .primery-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 25px;
   font-size: 14px;
   font-style: normal;
@@ -16,6 +17,7 @@
   width: fit-content;
   height: fit-content;
   min-height: 50px;
+  text-align: center;
 
   &.dark {
     background: #4D4D61;

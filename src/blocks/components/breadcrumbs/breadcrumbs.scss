@@ -1,0 +1,32 @@
+.breadcrumbs {
+  li {
+    display: inline-block;
+    position: relative;
+
+    a, span {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+    }
+
+    &:not(:last-child) {
+      padding-right: 30px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 9px;
+        background-image: url('../img/svg/crumbs-arrow.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
