@@ -8051,16 +8051,22 @@ bem-tools-create@bem-tools/bem-tools-create:
     imagemin-pngquant: "npm:~9.0.0"
     imagemin-webp: "npm:^6.0.0"
     imagemin-zopfli: "npm:^7.0.0"
+    inputmask: "npm:^5.0.8"
+    jquery: "npm:^3.7.1"
+    jquery-ui: "npm:^1.13.2"
     lint-staged: "npm:^12.3.5"
+    mm-jsr: "npm:^3.0.2"
     nice-select2: "npm:^2.1.0"
     postcss: "npm:^8.4.8"
     postcss-scss: "npm:^4.0.3"
     require-dir: "npm:^1.2.0"
     sass: "npm:^1.49.9"
+    select2: "npm:^4.1.0-rc.0"
     stylelint: "npm:^14.5.3"
     stylelint-config-standard-scss: "npm:^3.0.0"
     stylelint-order: "npm:^5.0.0"
     stylelint-selector-bem-pattern: "npm:^2.1.1"
+    swiper: "npm:^11.0.4"
     webpack: "npm:^5.70.0"
     webpack-stream: "npm:^7.0.0"
     yargs: "npm:^17.3.1"
@@ -8874,6 +8880,13 @@ bem-tools-create@bem-tools/bem-tools-create:
     node-gyp: "npm:latest"
   checksum: 8415dbb54cd3ab8232951cdf1d91b1f0ca3c5925617a47d985e650ff3a038efb265acfff0f4f826db1ef1f2f484f516e3e7874d47d059015957818149d9d932e
   conditions: os=linux
+  languageName: node
+  linkType: hard
+
+"inputmask@npm:^5.0.8":
+  version: 5.0.8
+  resolution: "inputmask@npm:5.0.8"
+  checksum: 636b9046c56b3fb6733813d2ddb9ab983c1a18525d9a6583b552e586028aa40b92e87bc3ccd7662451f1cce705f6bca81417405ba6f6fcb415e27956fd134054
   languageName: node
   linkType: hard
 
@@ -9786,6 +9799,22 @@ bem-tools-create@bem-tools/bem-tools-create:
   bin:
     jpeg-recompress: cli.js
   checksum: cc2577d245760d82d7d82e7b4dc00ce0e08b201f2f2dcedc5f4291e117bddc3049b5136ed32b18998816639137270a4696221a55c5245eb82cb2ef19263656f1
+  languageName: node
+  linkType: hard
+
+"jquery-ui@npm:^1.13.2":
+  version: 1.13.2
+  resolution: "jquery-ui@npm:1.13.2"
+  dependencies:
+    jquery: "npm:>=1.8.0 <4.0.0"
+  checksum: a7895115cba1cad44b9926cf40aea457811e787fb790de7308a43fefbef1cb0e4f4bff04b25818d7227519616863aef181b90526954333c46ea7c8a9fa12d96c
+  languageName: node
+  linkType: hard
+
+"jquery@npm:>=1.8.0 <4.0.0, jquery@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "jquery@npm:3.7.1"
+  checksum: 808cfbfb758438560224bf26e17fcd5afc7419170230c810dd11f5c1792e2263e2970cca8d659eb84fcd9acc301edb6d310096e450277d54be4f57071b0c82d9
   languageName: node
   linkType: hard
 
@@ -11201,6 +11230,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   bin:
     mkdirp: bin/cmd.js
   checksum: 46ea0f3ffa8bc6a5bc0c7081ffc3907777f0ed6516888d40a518c5111f8366d97d2678911ad1a6882bf592fa9de6c784fea32e1687bb94e1f4944170af48a5cf
+  languageName: node
+  linkType: hard
+
+"mm-jsr@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "mm-jsr@npm:3.0.2"
+  checksum: 1eacb80c93f9de847b00c9640b77a2b860f4c1450fa26218888e64927da78ef769b29be61629c665bb20e258a75dab2f3f7d1eff118b821c01c8bb749a19c540
   languageName: node
   linkType: hard
 
@@ -13814,6 +13850,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"select2@npm:^4.1.0-rc.0":
+  version: 4.1.0-rc.0
+  resolution: "select2@npm:4.1.0-rc.0"
+  checksum: 6e25a387ad059b341bd154374894a730d862a65913a86b84d3a9d5b31d71219f415c2f79ec8d40761efb4d8dc3e11155cdf14b2902cf6e4f99a21148f2688e69
+  languageName: node
+  linkType: hard
+
 "semver-greatest-satisfied-range@npm:^1.1.0":
   version: 1.1.0
   resolution: "semver-greatest-satisfied-range@npm:1.1.0"
@@ -15215,6 +15258,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   bin:
     svgo: ./bin/svgo
   checksum: 261a82b08acf63accd7a54b47b4ffcd2fc7e7d7f8efef3cbc61184583b24b4c5434656004c30190302821af0f6d7b047eac730b0dcdab5d179e6a74383ccc776
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^11.0.4":
+  version: 11.0.4
+  resolution: "swiper@npm:11.0.4"
+  checksum: 1d9fd48353ae704d042aa951e5380f9473614bc85cfe216d329d61fe1bcd3585ed29c49a3d1617e7829ad4bfb37cb60dcb65b4181c7f428a2102e88e4ed0d871
   languageName: node
   linkType: hard
 

@@ -9,19 +9,20 @@
       font-weight: 400;
       line-height: normal;
       text-decoration: none;
+      color: var(--txt);
     }
 
     &:not(:last-child) {
-      padding-right: 30px;
+      padding-right: 26px;
 
       &:after {
         content: "";
         position: absolute;
-        top: 50%;
-        right: 10px;
+        top: 54%;
+        right: 7px;
         transform: translateY(-50%);
-        width: 9px;
-        height: 9px;
+        width: 10px;
+        height: 10px;
         background-image: url('../img/svg/crumbs-arrow.svg');
         background-position: center center;
         background-repeat: no-repeat;

@@ -2,3 +2,10 @@ mixin nice-select(cls="", nm="")
   .nice-select-wrap 
     select(name=nm class=cls + " nice-select")
       block
+
+
+
+mixin nice-select2(cls="", nm="", pl="")
+  .nice-select-wrap 
+    select(name=nm  id=nm class=cls + " nice-select nice-select-area" )
+      block

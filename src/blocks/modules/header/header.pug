@@ -1,5 +1,126 @@
 include ../../components/nice-select/nice-select
 include ../../components/btn/btn
+include ../../components/txt-btn/txt-btn
+
+
+
+
+.mobile-menu 
+
+  button.close-menu(type="button" aria-label="Закрыть меню")
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M13 1L1 13M1 1L13 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+
+
+  .main-footer__content
+    .main-footer__content-inner 
+        .col 
+          .logo 
+            a(href="#")
+              img(src="img/svg/logo-green.svg" alt="#" width="124.67" height="28.656")
+
+        .col.col-menu 
+          ul.footer-list 
+            li 
+              a(href="#") Рекламодателям
+            li 
+              a(href="#") Правила размещения объявлений
+            li 
+              a(href="#") Пользовательское соглашение
+            li 
+              a(href="#") Карта сайта  
+
+        .col.col-menu 
+          ul.footer-list.footer-list--bold 
+            li 
+                a(href="#") Акции    
+            li 
+                a(href="#") Топливо     
+            li 
+                a(href="#") Реклама     
+            li 
+                a(href="#") Блог    
+            li 
+                a(href="#") Акции          
+
+        .col 
+          +btn-button
+            | Добавить компанию      
+
+
+  .main-footer__bottom 
+    .container 
+        .main-footer__bottom-inner 
+          .main-footer__bottom-actions
+            +nice-select('geo-select x3 white toTop', 'geo-footer')
+              option Актау
+              option Актобе
+              option Атырау
+              option Караганда
+              option Кокшетау
+              option Костанай
+              option Кызылорда
+              option Павлодар
+              option Петропавловск
+              option Семе
+              option Талдыкорган
+              option Тараз
+              option Туркестан
+              option Уральск 
+              option Усть-Каменогорск
+              option Актау
+              option Актобе
+              option Атырау
+              option Караганда
+              option Кокшетау
+              option Костанай
+              option Кызылорда
+              option Павлодар
+              option Петропавловск
+              option Семе
+              option Талдыкорган
+              option Тараз
+              option Туркестан
+              option Уральск 
+              option(selected) Усть-Каменогорск
+              option Актау
+              option Актобе
+              option Атырау
+              option Караганда
+              option Кокшетау
+              option Костанай
+              option Кызылорда
+              option Павлодар
+              option Петропавловск
+              option Семе
+              option Талдыкорган
+              option Тараз
+              option Туркестан
+              option Уральск 
+              option Усть-Каменогорск
+              option Актау
+              option Актобе
+              option Атырау
+              option Караганда
+              option Кокшетау
+              option Костанай
+              option Кызылорда
+              option Павлодар
+              option Петропавловск
+              option Семе
+              option Талдыкорган
+              option Тараз
+              option Туркестан
+              option Уральск 
+              option Усть-Каменогорск
+              
+            +nice-select('lang-select white toTop', 'lang-footer')
+              option(value="RU") RU 
+              option(value="KAZ") KAZ
+              option(value="EN") EN
+
+    
 
 
 header.main-header-wrap 
@@ -8,6 +129,7 @@ header.main-header-wrap
       .main-header__inner 
         a.logo(href="/")
           img(src="img/svg/logo.svg", alt="#" width="112.773" height="26.195") 
+          img(src="img/svg/logomob.svg", alt="#").mob
 
         +nice-select('geo-select x3', 'geo')
           option Актау
@@ -72,12 +194,24 @@ header.main-header-wrap
           option Усть-Каменогорск
 
         .main-header__actions 
+          button(type="button").services-btn.js-show-catalog
+            | Услуги 
+
           include ../../components/search/search
 
           +btn-link('add-company', '#')
             | Добавить компанию
 
+          button.search-btn(type="button" aria-label="Открыть поиск")
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+              <path d="M11.4586 11.0193L8.84054 8.29639C9.51367 7.49619 9.88249 6.48938 9.88249 5.44125C9.88249 2.99238 7.89011 1 5.44125 1C2.99238 1 1 2.99238 1 5.44125C1 7.89011 2.99238 9.88249 5.44125 9.88249C6.36058 9.88249 7.23667 9.6052 7.98569 9.07882L10.6236 11.8224C10.7339 11.9369 10.8822 12 11.0411 12C11.1915 12 11.3342 11.9426 11.4425 11.8384C11.6727 11.6169 11.68 11.2496 11.4586 11.0193ZM5.44125 2.15859C7.25134 2.15859 8.72391 3.63115 8.72391 5.44125C8.72391 7.25134 7.25134 8.72391 5.44125 8.72391C3.63115 8.72391 2.15859 7.25134 2.15859 5.44125C2.15859 3.63115 3.63115 2.15859 5.44125 2.15859Z" fill="#007879" stroke="white"/>
+            </svg> 
+
           include ../../components/cabinet/cabinet
+
+          button.burger-menu(type="button" aria-label="Открыть меню") 
+            span 
+            span 
 
   nav.nav-row
     .container

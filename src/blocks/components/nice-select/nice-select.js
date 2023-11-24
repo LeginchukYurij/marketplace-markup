@@ -11,8 +11,10 @@ if (selects.length) {
             const list = s.options;
 
             let rows = Math.ceil(list.length / 3);
-            console.log(s.dropdown.querySelector(".list"));
             s.dropdown.querySelector(".list").style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+
+
         }
     });
 }

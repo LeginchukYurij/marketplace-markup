@@ -1,0 +1,151 @@
+[class^="jsr"] {
+  box-sizing: border-box;
+}
+
+.jsr {
+  display: block;
+
+  position: relative;
+
+  padding-top: 10px;
+
+  width: 100%;
+
+  -webkit-user-select: none;
+    -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+
+  font: 14px sans-serif;
+  margin-top: 20px;
+}
+
+.jsr.is-disabled {
+  background: grey;
+}
+
+.jsr_rail {
+  height: 3px;
+  background: #CED8EB;
+}
+
+.jsr_slider {
+  position: absolute;
+  top: 11.5px;
+  left: 0;
+
+  transform: translate(-50%, -50%);
+
+  width: 9.217px;
+  height: 9.217px;
+
+  cursor: col-resize;
+  transition: background 0.1s ease-in-out;
+
+  outline: 0;
+
+  z-index: 3;
+}
+
+.jsr_slider:focus {
+  z-index: 4;
+}
+
+.jsr_slider::before {
+  content: '';
+  width: 9.217px;
+  height: 9.217px;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.jsr_slider:focus::before {
+  // background: #c00;
+}
+
+.jsr_label {
+  position: absolute;
+  top: calc(10px + 5px + 15px / 1.5);
+  transform: translateX(-50%);
+  padding: 0.2em 0.4em;
+  background: #444;
+  color: #fff;
+  font-size: 0.9em;
+  white-space: nowrap;
+  border-radius: 0.3em;
+  z-index: 2;
+  cursor: col-resize;
+  opacity: 1;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  background: none;
+  color: var(--accent);
+  padding: 0;
+  font-family: TT Norms;
+
+  top: auto;
+  bottom: calc(100% - 7px);
+}
+
+.jsr_label.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.jsr_bar {
+  position: absolute;
+  height: 3px;
+  background-color: var(--accent);
+  z-index: 2;
+  cursor: move;
+  top: 10px;
+}
+
+.jsr_limit {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  height: 5px;
+  top: 10px;
+  background-color: #727272;
+}
+
+.jsr_grid {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.jsr_lockscreen {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+
+.price-range-container {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-bottom: 2px;
+
+    span {
+      color: #4D4D61;
+      font-family: TT Norms;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

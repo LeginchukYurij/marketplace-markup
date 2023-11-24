@@ -56,6 +56,10 @@
       display: flex;
       gap: 68px;
       margin-left: 10%;
+
+      & + .col-menu {
+        margin-left: 4px;
+      }
     }
 
     .col:last-child {

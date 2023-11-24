@@ -5,7 +5,7 @@
 }
 
 .catalog-content, .catalog-sidebar {
-  padding-top: 42px;
+  padding-top: 37px;
   padding-bottom: 89px;
   padding-left: 50px;
   padding-right: 50px;
@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
   }
 
   &__title {
@@ -32,7 +32,8 @@
     margin-bottom: 29.5px;
 
     .count {
-      position: absolute;
+      display: inline-block;
+      position: static;
       top: 0;
       left: calc(100% + 9px);
       padding: 3.5px 7.15px 4.5px;
@@ -43,6 +44,8 @@
       line-height: normal;
       border-radius: 20px;
       background: #E1E8F8;
+      /* margin-top: -2px; */
+      transform: translateY(-21px);
     }
   }
 
@@ -58,12 +61,121 @@
   padding: 0;
   border: none;
   background: none;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--accent);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+ 
+  .btn-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--accent);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 }
+
+
+.catalog-sidebar {
+  &__box + &__box {
+    margin-top: 24px;
+  }
+
+  .catalog-filter-form {
+    padding-top: 8px;
+  }
+
+  &__box  {
+
+    &-title {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      margin-bottom: 15px;
+
+      &.mb {
+        margin-bottom: 24px;
+      }
+    }
+
+    &-ex {
+      display: block;
+      color: #A3AAB9;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 7px;
+    }
+
+    .check-wrap  {
+      width: calc(100% + 2px);
+    }
+  }
+}
+
+
+.comp-card__title .lbls, .comp-card__descr, .rating-row .views, .comp-card__more .q-contacts-row    {
+  display: none;
+}
+
+
+.points-map {
+  display: none;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px 10px 0 0;
+}
+
+.sto-cards-list.onmap {
+  .comp-card:not(.active) {
+    display: none;
+  }
+
+  .comp-card.active {
+    margin-top: -10px;
+  }
+
+  .comp-card {
+    transform: translateY(20px);
+    transition: all .2s ease-in;
+    opacity: 0;
+
+    &.animated {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .show-more {
+    display: none;
+  }
+
+  .points-map {
+    display: block;
+  }
+}
+
+
+.show-on-map:not(.active) {
+  .btn-inner--list {
+    display: none;
+  }
+
+  .btn-inner--map  {
+    display: flex;
+  }
+}
+
+.show-on-map:is(.active) {
+  .btn-inner--list {
+    display: flex;
+  }
+
+  .btn-inner--map  {
+    display: none;
+  }
+}
+

@@ -1,0 +1,439 @@
+include ../../components/breadcrumbs/breadcrumbs
+include ../../components/btn/btn
+include ../../components/checkbox/checkbox
+include ../../components/nice-select/nice-select
+
+.add-company-page
+  .container 
+    +breadcrumbs
+      li 
+        a(href="/") Главная
+      li 
+        span  СТО
+
+    
+    h1.h1.add-company-page__title Добавить компанию
+
+
+    .cols-grid
+      .col
+        .swiper.steps-slider 
+          .swiper-wrapper 
+            .swiper-slide.step-slide 
+              button(type="button" aria-label="Шаг 1")
+                span Шаг 1
+                strong Информация<br> о компании
+
+            .swiper-slide.step-slide 
+              button(type="button" aria-label="Шаг 2")
+                span Шаг 2
+                strong Услуги
+
+            .swiper-slide.step-slide 
+              button(type="button" aria-label="Шаг 3")
+                span Шаг 3
+                strong График работы
+
+            .swiper-slide.step-slide 
+              button(type="button" aria-label="Шаг 4")
+                span Шаг 4
+                strong Контакты и локация
+
+            .swiper-slide.step-slide 
+              button(type="button" aria-label="Шаг 5")
+                span Шаг 5
+                strong Другая информация
+            
+
+
+      .col
+        form(action="#").swiper.steps-content
+          .swiper-wrapper 
+            .swiper-slide.step.step1 
+              .steps-content-box
+                .steps-content-box__head 
+                  strong Информация о компании
+                  p Пару слов об этом шаге
+
+                .steps-content-box__body 
+                  .input-wrap
+                    label(for="name") Название компании* 
+                    .input-wrap__row
+                      input(type="text" id="name" name="name").req
+                      img(src="img/svg/complite.svg", alt="#").complite-img
+                    .ex Например, Toyota
+
+                  .input-wrap 
+                    label(for="short") Краткое описание*
+                    .input-wrap__row
+                      textarea#short(name="short" data-max="100").no-res.req
+                      img(src="img/svg/complite.svg", alt="#").complite-img
+                    .ex до 100 символов
+
+                  .input-wrap 
+                    label(for="full") Полное описание*
+                      .tooltip 
+                        span ?
+
+                    .input-wrap__row
+                      textarea#short(name="full" data-max="1000").req
+                      img(src="img/svg/complite.svg", alt="#").complite-img
+                    .ex до 1000 символов
+
+                .steps-content-box__footer 
+                  <button class="primery-btn next-step btn" type="button">Следующий шаг</button>
+
+
+            .swiper-slide.step.step2  
+              .steps-content-box
+                .steps-content-box__head 
+                  strong Услуги
+                  p Добавьте услуги вашей компании. Укажите стоимость каджой услуги в тенге
+
+                .steps-content-box__body
+                  .t-cols 
+                    .t-cols__head 
+                      span Услуга
+
+                      span Стоимость, от (тг)
+
+                    .s-row 
+                      .s-row__inner 
+                        .col
+                          +checkbox('checkbox', 's1', 's1', "", 'Автоателье', false, "")
+
+                        .col.zero
+                          input(type="number" readonly value="0").inp-xs
+
+                    .s-row 
+                      .s-row__inner 
+                        .col
+                          +checkbox('checkbox', 's3', 's3', "", 'Эвакуаторы', true, "")
+
+                        .col.zero
+                          input(type="number" readonly value="0").inp-xs
+
+                      .s-row 
+                        .s-row__inner 
+                          .col
+                            +checkbox('checkbox', 's4', 's4', "", 'Эвакуатор частичной погрузки', true, "")
+
+                          .col
+                            span от
+                            input(type="number" readonly value="456").inp-xs
+                            span тенге
+
+                      .s-row 
+                        .s-row__inner 
+                          .col
+                            +checkbox('checkbox', 's5', 's5', "", 'Эвакуатор с манипулятором', false, "")
+
+                          .col.zero
+                            input(type="number" readonly value="0").inp-xs
+
+                      .s-row 
+                        .s-row__inner 
+                          .col
+                            +checkbox('checkbox', 's6', 's6', "", 'Грузовой эвакуатор', false, "")
+
+                          .col.zero
+                            input(type="number" readonly value="0").inp-xs
+                    
+                    .s-row 
+                      .s-row__inner 
+                        .col
+                          +checkbox('checkbox', 's6', 's6', "", 'Автошкола', false, "")
+
+                        .col.zero
+                          input(type="number" readonly value="0").inp-xs
+
+                    .s-row 
+                      .s-row__inner 
+                        .col
+                          +checkbox('checkbox', 's7', 's7', "", 'Автоподбор', true, "")
+
+                        .col.zero
+                          input(type="number" readonly value="0").inp-xs
+
+                .steps-content-box__footer
+                  button.back-btn(type="button") Назад
+                  <button class="primery-btn next-step btn" type="button">Следующий шаг</button>
+
+                
+
+            .swiper-slide.step.step3
+              .steps-content-box
+                .steps-content-box__head 
+                  strong График работы
+                  p Укажите действующий график работы. В компании с указанным графиком работы обращаются на 30% чаще.
+
+                .steps-content-box__body
+
+                  .toggle-rows
+                    .toggle-item-container
+                      .toggle-item 
+                        input(type="checkbox" checked id="j1")
+                        .toggle-item__inner 
+                          .toggle-item__ball
+
+                      label(for="j1")  По часам
+
+                    .toggle-item-container
+                      .toggle-item 
+                        input(type="checkbox" id="j2")
+                        .toggle-item__inner 
+                          .toggle-item__ball
+
+                      label(for="j2") Круглосуточно
+                        
+
+                  .grapfic-cols 
+                    .col 
+                      .g-row
+                        strong Пн
+                        input(type="text" placeholder="с").inp-xs
+                        input(type="text" placeholder="до").inp-xs
+                      .g-row
+                        strong Вт
+                        input(type="text" placeholder="с").inp-xs
+                        input(type="text" placeholder="до").inp-xs
+                      .g-row
+                        strong Ср
+                        input(type="text" placeholder="с").inp-xs
+                        input(type="text" placeholder="до").inp-xs
+                      .g-row
+                        strong Чт
+                        input(type="text" placeholder="с").inp-xs
+                        input(type="text" placeholder="до").inp-xs
+                      .g-row
+                        strong Пн
+                        input(type="text" placeholder="с").inp-xs
+                        input(type="text" placeholder="до").inp-xs
+                      .g-row
+                        strong.r Сб
+                        input(type="text" placeholder="с").inp-xs
+                        input(type="text" placeholder="до").inp-xs
+                      .g-row
+                        strong.r Вс
+                        input(type="text" placeholder="с").inp-xs
+                        input(type="text" placeholder="до").inp-xs
+
+                    .col 
+                      p Оставьте поля незаполненными, если в эти дни не работаете
+
+                .steps-content-box__footer
+                  button.back-btn(type="button") Назад
+                  <button class="primery-btn next-step btn" type="button">Следующий шаг</button>
+
+
+            .swiper-slide.step.step4  
+              .steps-content-box
+                .steps-content-box__head 
+                  strong Контакты компании
+                  p Укажите действующий график работы. В компании с указанным графиком работы обращаются на 30% чаще.
+
+
+                .steps-content-box__body
+                  .input-wrap
+                    label(for="tel") Телефон*
+                    
+                    .input-wrap__grid
+                      .col
+                        .input-wrap__row
+                          input(type="text" id="tel"  data-type="phone").req
+                          img(src="img/svg/complite.svg", alt="#").complite-img
+
+
+                        .ex  Например, + 7 (080) 345 345 5
+
+                      .col 
+                         button(type="button").add-more.btn Добавить еще <span>&nbsp;телефон</span>
+
+                    
+
+                  .input-wrap
+                    label(for="email") Email 
+
+                    .input-wrap__grid
+                      .col
+                        .input-wrap__row
+                          input(type="email" id="email").fraq
+                          img(src="img/svg/complite.svg", alt="#").complite-img
+
+                        .ex  Например, + 7 (080) 345 345 5
+
+                      .col 
+                         button(type="button").add-more.btn Добавить еще <span>&nbsp;email</span>
+
+                    
+
+                  .input-wrap.add-more 
+                    label(for="site") Сайт
+
+                    .input-wrap__grid
+                      .col
+                        .input-wrap__row
+                          input(type="text" id="site").fraq
+                          img(src="img/svg/complite.svg", alt="#").complite-img
+      
+                        .ex  Например, + 7 (080) 345 345 5
+
+                      .col 
+                         button(type="button").add-more.btn Добавить еще <span>&nbsp;сайт</span>
+
+                  .input-wrap.add-more 
+                    label(for="region") Регион*
+
+                    .input-wrap__grid
+                      .col
+                        .input-wrap__row
+                          input(type="text" id="region").req
+                          img(src="img/svg/complite.svg", alt="#").complite-img
+
+                        .ex  Например, + 7 (080) 345 345 5
+
+                      .col 
+                         button(type="button").add-more.btn Добавить еще <span>&nbsp;регион</span>
+
+                  .input-wrap.add-more 
+                    label(for="addres") Адрес
+
+                    .input-wrap__grid
+                      .col
+                        .input-wrap__row
+                          input(type="text" id="addres").fraq
+                          img(src="img/svg/complite.svg", alt="#").complite-img
+                        .ex  Например, + 7 (080) 345 345 5
+
+                      .col 
+                         button(type="button").add-more.btn Добавить еще <span>&nbsp;адрес</span>
+
+                  
+                  .map-box  
+                    input(type="hidden" name="map-coords" value="43.24720224830525 76.90100507537984")#map-coords
+                    strong Координаты
+                    p Укажите координаты вашей организации, просто нажав в нужном месте на карте.
+
+                    #map
+
+                .steps-content-box__footer
+                  button.back-btn(type="button") Назад
+                  <button class="primery-btn next-step btn" type="button">Следующий шаг</button>
+
+
+
+            .swiper-slide.step.step5 
+              .steps-content-box
+                .steps-content-box__head 
+                  strong Другая информация
+                  p Укажите действующий график работы.
+
+                .steps-content-box__body
+
+                  .dwld-photo-box 
+                    label(for="file")  Главное фото
+
+                    <div class="fileloader-box" id="mainPhoto"> 
+                      <div class="fileloader-info"> 
+                        <button class="primery-btn  xs  btn uploadHandler" type="button">Выбрать</button>
+                        small формат: jpeg, png
+                        <input class="file" type="file" id="file">
+                      </div>
+                      
+                      .files-gallery.files-gallery--circ
+                    </div>
+
+                  .dwld-photo-box
+                    label(for="file2")  Галерея (до 10 шт)
+
+                    <div class="fileloader-box fileloader-box--multiple" id="galleryPhotos"> 
+                      <div class="fileloader-info"> 
+                        <button class="primery-btn  xs  btn uploadHandler" type="button">Выбрать</button>
+                        small формат: jpeg, png
+                        <input class="file" type="file" id="file2" multiple>
+                      </div>
+                      
+                      .files-gallery
+                    </div>
+
+                  .toggle-rows
+                    .toggle-item-container
+                      .toggle-item 
+                        input(type="checkbox"  id="j3")
+                        .toggle-item__inner 
+                          .toggle-item__ball
+
+                      label(for="j3")  WiFi
+
+                    .toggle-item-container
+                      .toggle-item 
+                        input(type="checkbox" id="j4")
+                        .toggle-item__inner 
+                          .toggle-item__ball
+
+                      label(for="j4") Кофе
+
+                    .toggle-item-container
+                      .toggle-item 
+                        input(type="checkbox" id="j5")
+                        .toggle-item__inner 
+                          .toggle-item__ball
+
+                      label(for="j5") Комната отдыха
+
+                  .select-wrap  
+                    label(for="payment")  Оплата*
+                    +nice-select2("req", "payment")
+                      option(value="no-chosen") Не выбрано
+                      option(value="#") Option 1
+                      option(value="#") Option 2
+                      option(value="#") Option 3
+                      option(value="#") Option 4
+
+                  .select-wrap
+                    label(for="marka") Марка автомобиля 
+                    <select class="select-multiple" name="marka" multiple="multiple" id="marka">
+                      <option value="AL">Alabama</option>
+                      <option value="WY">Wyoming</option>
+                       option(value="#") Option 1
+                      option(value="#") Option 2
+                      option(value="#") Option 3
+                      option(value="#") Option 4
+                       option(value="#") Option 1
+                      option(value="#") Option 2
+                      option(value="#") Option 3
+                      option(value="#") Option 4
+                    </select>
+
+                  .select-wrap  
+                    label(for="year")  Год выпуска
+                    +nice-select2("", "year")
+                      option(value="no-chosen") Не выбрано
+                      option(value="#") Option 1
+                      option(value="#") Option 2
+                      option(value="#") Option 3
+                      option(value="#") Option 4
+
+                .steps-content-box__footer
+                  button.back-btn(type="button") Назад
+                  <button class="primery-btn btn submit-add-company" type="submit">Добавить компанию</button>
+
+
+
+
+      .col.tip-col 
+        .tip-ic 
+          img(src="img/svg/tip.svg", alt="#")
+
+        h2.tip-col__title Советы и подсказки
+
+        p В новой форме, при создании клиента — появятся подсказки для названия компании или ФИО контактного лица
+
+        .separate-line
+
+        .tip-img 
+          img(src="img/tip_img.png", alt="#")
+
+        p В новой форме, при создании клиента — появятся подсказки для названия компании или ФИО контактного лица
+
+        .separate-line.end

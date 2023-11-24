@@ -1,0 +1,76 @@
+mixin checkbox(itype, name, id, cls, label, checked, strong)
+  if checked 
+    div(class="check-wrap " + cls)
+      .check 
+        input(type=itype name=name id=id checked)
+        .check__mask
+          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5 1.38281L4.625 8.38281L1.5 5.20099" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> 
+
+      .check-label
+        if label
+          label(for=id)=label
+            if strong 
+              strong= strong 
+
+          block
+          
+          
+
+  else 
+    div(class="check-wrap " + cls)
+      .check 
+        input(type=itype name=name id=id)
+        .check__mask
+          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5 1.38281L4.625 8.38281L1.5 5.20099" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> 
+
+      .check-label
+        if label
+          label(for=id)=label
+            if strong 
+              strong= strong   
+
+          block
+
+
+
+
+mixin radio(itype, name, id, cls, label, checked, strong)
+  if checked 
+    div(class="check-wrap check-wrap--radio " + cls)
+      .check 
+        input(type=itype name=name id=id checked)
+        .check__mask
+          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5 1.38281L4.625 8.38281L1.5 5.20099" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> 
+
+      .check-label
+        if label
+          label(for=id)=label
+            if strong 
+              strong= strong 
+
+          block
+          
+          
+
+  else 
+    div(class="check-wrap check-wrap--radio " + cls)
+      .check 
+        input(type=itype name=name id=id)
+        .check__mask
+          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.5 1.38281L4.625 8.38281L1.5 5.20099" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg> 
+
+      .check-label
+        if label
+          label(for=id)=label
+            if strong 
+              strong= strong   
+
+          block

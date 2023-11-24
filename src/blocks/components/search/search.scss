@@ -42,6 +42,13 @@
     border-radius: 10px;
     background: #FBFEFA;
 
+    .current {
+      width: 52px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     &:after {
       right: 26px;
     }

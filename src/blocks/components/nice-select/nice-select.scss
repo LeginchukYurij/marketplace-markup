@@ -12,6 +12,7 @@
   font-weight: 600;
   line-height: normal;
   background: none;
+  float: none;
 
   &.dark {
     color: #4D4D61;
@@ -44,7 +45,7 @@
   width: 6px;
   height: 6px;
   border-color: var(--accent);
-  margin-top: -2px;
+  margin-top: -3px;
 }
 
 .nice-select .option {
@@ -114,3 +115,31 @@
     }
   }
 }
+
+
+.nice-select-area {
+  padding: 10px 30px 10px 24px;
+  border-radius: 10px;
+  background: #E3EAF8;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--txt);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%;
+  text-align: left;
+
+  &:after {
+    right: 20px;
+    border-color: var(--txt);
+  }
+
+  .nice-select-dropdown {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,268 @@
+.comp-card {
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 20px 40px 0px #DFEAFE;
+  padding: 21px 31px 22px 25px;
+  display: flex;
+  align-items: center;
+
+  & + .comp-card {
+    margin-top: 10px;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+    margin-right: 27px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    gap: 7.44px;
+    margin-bottom: 4.4px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    a {
+      text-decoration: none;
+      color: var(--text);
+    }
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 8.27px;
+    color: #777E90;
+    line-height: 20px;
+    margin-top: 3px;
+
+    .dot {
+      width: 6px;
+      min-width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    margin-right: 42px;
+    // padding-right: 39px;
+    p {
+      color: #777E90;
+      line-height: 20px;
+    }
+  }
+
+  &__more {
+    max-width: 317px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  
+
+  &--primery {
+    align-items: flex-start;
+    background: #FFF8E8;
+    box-shadow: 0px 20px 40px 0px rgba(255, 168, 66, 0.19);
+    padding-bottom: 27px;
+
+    .comp-card__info {
+      padding-top: 2.17px;
+    }
+
+    .comp-card__title  {
+      margin-bottom: 8.4px;
+    }
+
+    .comp-card__more {
+      padding-top: 2px;
+    }
+  
+  }
+
+  .q-contacts-row  {
+    margin-top: 14px;
+  }
+
+
+  .default-logo  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 49.84px;
+    min-width: 49.84px;
+    height: 49.84px;
+    background: linear-gradient(0deg, #CED8EB 0%, #CED8EB 100%), linear-gradient(180deg, #93D8AF 0%, #75A3FF 100%);
+    border-radius: 50%;
+    margin-bottom: 6px;
+  }
+  
+  .logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 12px;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+}
+
+
+.views  {
+  display: flex;
+  align-items: center;
+  gap: 7.32px;
+
+  span {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+.fav {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  width: 20.564px;
+  height: 16.703px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.rating  {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  .stars  {
+    display: flex;
+    gap: 2px;
+  }
+
+  strong {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+.rating-row {
+  display: flex;
+  gap: 12px;
+
+ 
+}
+
+.reviews-link {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  color: #4D4D61;
+}
+
+.gallery-row  {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8.25px;
+
+  &__item {
+    height: 42.638px;
+
+    img {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      // object-fit: c;
+      max-width: 100%;
+    }
+  }
+}
+
+.accent-filled-link {
+  display: flex;
+  align-items: center;
+  gap: 9.36px;
+  text-decoration: none;
+  padding: 5.5px 10px;
+  border-radius: 5px;
+  background: rgba(243, 97, 112, 0.15);
+  box-shadow: 0px 20px 30px -20px rgba(0, 10, 255, 0.68);
+
+  .arr {
+    margin-left: auto;
+  }
+
+  span {
+    color: var(--red);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+
+.q-contacts-row  {
+  display: flex;
+  gap: 5px;
+}
+
+.q-contact {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.tel {
+    background: #FFC12F;
+    box-shadow: 0px 20px 30px -20px rgba(0, 10, 255, 0.68);
+  }
+
+  &.watsapp {
+    background: #36B752;
+    box-shadow: 0px 20px 30px -20px rgba(0, 10, 255, 0.68);
+  }
+
+  &.tg {
+    background: #4187C8;
+    box-shadow: 0px 20px 30px -20px rgba(0, 10, 255, 0.68);
+  }
+}
